@@ -6,7 +6,13 @@
 # Gradle
 .gradle/
 build/
+# Keep gradle wrapper files but exclude large distributions
+gradle-*.zip
+gradle-*/
 !gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+!gradlew
+!gradlew.bat
 
 # IntelliJ IDEA
 .idea/
