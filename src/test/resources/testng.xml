@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="IMDB Regression Suite" parallel="methods" thread-count="2">
+    
+    <listeners>
+        <listener class-name="com.imdb.listeners.TestListener"/>
+    </listeners>
+    
+    <test name="IMDB Search Tests" parallel="classes" thread-count="1">
+        <classes>
+            <class name="com.imdb.config.TestConfig"/>
+            <class name="com.imdb.ImdbSearchTest"/>
+        </classes>
+    </test>
+    
+    <test name="Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.imdb.ImdbSearchTest"/>
+        </classes>
+    </test>
+    
+</suite> 

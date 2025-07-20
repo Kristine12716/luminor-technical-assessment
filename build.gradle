@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.12.0'
+}
+
+group 'com.imdb'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.codeborne:selenide:7.2.3'
+    testImplementation 'org.testng:testng:7.9.0'
+    testImplementation 'io.qameta.allure:allure-testng:2.24.0'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+    
+    systemProperties System.getProperties()
+    
+    // Test execution options
+    maxParallelForks = 2
+    failFast = false
+    
+    // Reports
+    reports {
+        html.required = true
+        junitXml.required = true
+    }
+}
+
+allure {
+    version = '2.24.0'
+    autoconfigure = true
+    aspectjweaver = true
+}
+
+task regressionTest(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+} 

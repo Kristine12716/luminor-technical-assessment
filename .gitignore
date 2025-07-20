@@ -1,0 +1,35 @@
+# Java
+*.class
+*.log
+*.ctxt
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Selenide/Allure reports
+allure-results/
+allure-report/
+selenide-reports/
+
+# Test reports
+build/reports/
+
+# Logs
+*.log
+
+# Environment
+.env 
