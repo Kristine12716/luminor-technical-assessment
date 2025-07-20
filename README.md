@@ -174,4 +174,4 @@ Edit `src/test/java/com/imdb/data/TestData.java` to modify:
 
 ## 📝 License
 
-This project is for educational and demonstration purposes. 
+This project is for educational and demonstration purposes. # luminor-technical-assessment
