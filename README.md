@@ -174,4 +174,4 @@ Edit `src/test/java/com/imdb/data/TestData.java` to modify:
 
 ## 📝 License
 
-This project is for educational and demonstration purposes. # luminor-technical-assessment
+This project is for Lumonor bank AGA role technical assessment and demonstration purposes. # luminor-technical-assessment
