@@ -8,12 +8,12 @@ import static com.codeborne.selenide.Selenide.$$x;
 public class SearchResultsPage {
     private final ElementsCollection dropdownTitles = $$x("//div[contains(@class, 'searchResult__constTitle')]");
 
-    public String getSecondTitleName() {
+    public String getFirstTitleName() {
         dropdownTitles.get(1).shouldBe(Condition.visible);
         return dropdownTitles.get(1).getText();
     }
 
-    public void clickSecondTitle() {
+    public void clickFirstTitle() {
         dropdownTitles.get(1).shouldBe(Condition.visible).click();
     }
 } 

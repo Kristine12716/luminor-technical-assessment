@@ -2,9 +2,13 @@ package com.imdb;
 
 import com.imdb.base.BaseTest;
 import com.imdb.data.TestData;
-import com.imdb.pages.*;
+import com.imdb.pages.HomePage;
+import com.imdb.pages.ProfilePage;
+import com.imdb.pages.SearchResultsPage;
+import com.imdb.pages.TitlePage;
 import io.qameta.allure.*;
-import org.testng.annotations.*;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
@@ -39,13 +43,13 @@ public class ImdbSearchTest extends BaseTest {
         homePage.search(TestData.SEARCH_QUERY_QA);
 
         // 3) When dropdown opens, save the name of the second title
-        String secondTitleName = searchResultsPage.getSecondTitleName();
+        String firstTitleName = searchResultsPage.getFirstTitleName();
 
         // 4) Click on the second title
-        searchResultsPage.clickSecondTitle();
+        searchResultsPage.clickFirstTitle();
 
         // 5) Verify that page title matches the one saved from the dropdown
-        assertEquals(titlePage.getTitle(), secondTitleName, "Title page header should match dropdown");
+        assertEquals(titlePage.getTitle(), firstTitleName, "Title page header should match dropdown");
 
         // 6) Verify there are more than 3 members in the "top cast section"
         assertTrue(titlePage.getTopCastCount() > TestData.MIN_CAST_MEMBERS, 
