@@ -68,21 +68,6 @@ src/test/java/com/imdb/
 
 ## 🧪 Running Tests
 
-### All Tests
-```bash
-./gradle-8.14.3/bin/gradle test
-```
-
-### Smoke Tests Only
-```bash
-./gradle-8.14.3/bin/gradle smokeTest
-```
-
-### Regression Tests
-```bash
-./gradle-8.14.3/bin/gradle regressionTest
-```
-
 ### With Custom Properties
 ```bash
 ./gradle-8.14.3/bin/gradle test -Dbrowser=firefox -Dheadless=true
@@ -131,10 +116,6 @@ Edit `src/test/java/com/imdb/data/TestData.java` to modify:
 2. Extend existing POM pattern
 3. Add `@Step` annotations for Allure reporting
 
-### Test Groups
-- `smoke` - Critical functionality tests
-- `regression` - Full test suite
-- `ui` - User interface tests
 
 ## 🐛 Troubleshooting
 
@@ -174,4 +155,4 @@ Edit `src/test/java/com/imdb/data/TestData.java` to modify:
 
 ## 📝 License
 
-This project is for educational and demonstration purposes. # luminor-technical-assessment
+This project is for Lumonor bank AQA engineer role - technical assessment and demonstration purposes. # luminor-technical-assessment
